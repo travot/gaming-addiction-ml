@@ -1,0 +1,42 @@
+{
+  "data_path": "data/features.npz",
+  "task": "classification",
+  "method": "mlp",
+  "preprocessing": "standardization",
+  "feature_expansion": true,
+  "exp_degree": 2,
+  "oversample": true,
+  "training": {
+    "lr": 1e-3,
+    "epochs": 200,
+    "batch_size": 16,
+    "hidden_size": 128,
+    "hidden_sizes": "128",
+    "l2": 1e-4,
+    "weight_decay": 1e-4,
+    "dropout_rate": 0.2,
+    "init_method": "xavier",
+    "optimizer": "adam"
+  },
+  "cv": {
+    "enabled": true,
+    "n_folds": 5
+  },
+  "grid_search": {
+    "enabled": false,
+    "use_best_config": false,
+    "save_plots": false,
+    "param_grid": {
+      "lr": [1e-5, 1e-4, 1e-3],
+      "epochs": [100, 200],
+      "batch_size": [16, 32],
+      "hidden_size": [32, 64, 128]
+    }
+  },
+  "feature_selection": {
+    "enabled": true,
+    "variance_threshold": 0.05,
+    "correlation_threshold": 0.9,
+    "top_k": 5
+  }
+}

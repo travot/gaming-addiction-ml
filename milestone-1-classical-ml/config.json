@@ -1,0 +1,12 @@
+{
+  "task": "classification",
+  "method": "logistic_regression",
+  "data_path": "data/features.npz",
+  "K": 3,
+  "lr": [0.00005, 0.0001, 0.0005],
+  "max_iters": [300, 500, 800],
+  "class_weight": ["none", "weighted", "weighted_clipped"],
+  "test": true,
+  "cross_validate": true,
+  "cv_folds": 5
+}
