@@ -65,3 +65,7 @@ python main.py --task classification --method knn --data_path data/features.npz
 cd ../milestone-2-mlp-kmeans
 python main.py --task classification --method mlp
 ```
+
+## Development history
+
+This is a curated copy of the team's work. The original development repositories are private; the full commit history can be provided on request.
